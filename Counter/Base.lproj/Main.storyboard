@@ -17,43 +17,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knh-eC-MEW">
-                                <rect key="frame" x="20" y="44" width="374" height="271"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knh-eC-MEW">
+                                <rect key="frame" x="20" y="44" width="374" height="286"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="knh-eC-MEW" secondAttribute="height" multiplier="374:271" id="29W-rd-x9x"/>
+                                    <constraint firstAttribute="width" secondItem="knh-eC-MEW" secondAttribute="height" multiplier="17:13" id="Lub-mc-kxR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJq-nn-tmS">
-                                <rect key="frame" x="20" y="701" width="374" height="100"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="234" y="762" width="160" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="WJq-nn-tmS" secondAttribute="height" multiplier="187:50" id="ftk-FC-UlC"/>
+                                    <constraint firstAttribute="width" constant="160" id="XTb-Ax-JqZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="wVr-OB-w98"/>
                                 </constraints>
-                                <color key="tintColor" red="0.99758184520000004" green="0.041830998930000002" blue="0.17917658440000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Counter">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="60"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseCount" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEV-fU-fYD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyN-EO-uhR">
+                                <rect key="frame" x="20" y="762" width="160" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OG7-ad-Svz"/>
+                                    <constraint firstAttribute="width" constant="160" id="iyq-uw-ra3"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="60"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reduceCount" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sj-9z-stw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-Lh-6cb">
+                                <rect key="frame" x="20" y="642.5" width="374" height="78.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78.5" id="tRN-NS-NvC"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="66"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="KyI-I6-xvj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knh-eC-MEW" secondAttribute="trailing" constant="20" id="09L-lR-N2N"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WJq-nn-tmS" secondAttribute="bottom" constant="61" id="4HQ-Ui-jfF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJq-nn-tmS" secondAttribute="trailing" constant="20" id="4ZM-aw-t4V"/>
-                            <constraint firstItem="knh-eC-MEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E6v-Gb-VSW"/>
-                            <constraint firstItem="WJq-nn-tmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GBg-Xh-75F"/>
-                            <constraint firstItem="knh-eC-MEW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q80-qB-3mr"/>
+                            <constraint firstItem="TyN-EO-uhR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0d9-S9-uXB"/>
+                            <constraint firstItem="knh-eC-MEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2gW-Ie-0Wi"/>
+                            <constraint firstItem="NbR-Lh-6cb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D0J-NO-cMr"/>
+                            <constraint firstItem="WJq-nn-tmS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bOg-oP-jca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJq-nn-tmS" secondAttribute="trailing" constant="20" id="eXY-p3-XVw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NbR-Lh-6cb" secondAttribute="trailing" constant="20" id="ffA-Sa-5dD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knh-eC-MEW" secondAttribute="trailing" constant="20" id="rEd-ts-LgS"/>
+                            <constraint firstItem="WJq-nn-tmS" firstAttribute="top" secondItem="NbR-Lh-6cb" secondAttribute="bottom" constant="41" id="uYk-DQ-LTY"/>
+                            <constraint firstItem="TyN-EO-uhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yae-X8-CMf"/>
+                            <constraint firstItem="knh-eC-MEW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zK4-IU-bB4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="countLabel" destination="knh-eC-MEW" id="80Z-KN-Csw"/>
-                        <outlet property="counterButton" destination="WJq-nn-tmS" id="J9b-MC-neG"/>
+                        <outlet property="minusButtonTitle" destination="TyN-EO-uhR" id="tpI-hj-4OZ"/>
+                        <outlet property="plusButtonTitle" destination="WJq-nn-tmS" id="J9b-MC-neG"/>
+                        <outlet property="resetButtonTitle" destination="NbR-Lh-6cb" id="Jwh-9G-HaW"/>
+                        <outlet property="textLabel" destination="knh-eC-MEW" id="80Z-KN-Csw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,6 +105,15 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
