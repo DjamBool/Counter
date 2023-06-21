@@ -51,6 +51,10 @@
                             <constraint firstItem="knh-eC-MEW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q80-qB-3mr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="knh-eC-MEW" id="80Z-KN-Csw"/>
+                        <outlet property="counterButton" destination="WJq-nn-tmS" id="J9b-MC-neG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
