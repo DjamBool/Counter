@@ -59,8 +59,20 @@
                                     <action selector="reduceCount" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sj-9z-stw"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wt0-YU-5TD">
+                                <rect key="frame" x="20" y="340" width="374" height="323.5"/>
+                                <color key="backgroundColor" red="0.83402737345919575" green="1" blue="0.80391237617049893" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-Lh-6cb">
-                                <rect key="frame" x="20" y="642.5" width="374" height="78.5"/>
+                                <rect key="frame" x="20" y="673.5" width="374" height="78.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78.5" id="tRN-NS-NvC"/>
@@ -81,16 +93,21 @@
                             <constraint firstItem="TyN-EO-uhR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0d9-S9-uXB"/>
                             <constraint firstItem="knh-eC-MEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2gW-Ie-0Wi"/>
                             <constraint firstItem="NbR-Lh-6cb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D0J-NO-cMr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wt0-YU-5TD" secondAttribute="trailing" constant="20" id="T2B-WI-UDy"/>
                             <constraint firstItem="WJq-nn-tmS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bOg-oP-jca"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJq-nn-tmS" secondAttribute="trailing" constant="20" id="eXY-p3-XVw"/>
+                            <constraint firstItem="Wt0-YU-5TD" firstAttribute="top" secondItem="knh-eC-MEW" secondAttribute="bottom" constant="10" id="fOM-NT-2e0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NbR-Lh-6cb" secondAttribute="trailing" constant="20" id="ffA-Sa-5dD"/>
+                            <constraint firstItem="NbR-Lh-6cb" firstAttribute="top" secondItem="Wt0-YU-5TD" secondAttribute="bottom" constant="10" id="j1a-df-DVy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knh-eC-MEW" secondAttribute="trailing" constant="20" id="rEd-ts-LgS"/>
-                            <constraint firstItem="WJq-nn-tmS" firstAttribute="top" secondItem="NbR-Lh-6cb" secondAttribute="bottom" constant="41" id="uYk-DQ-LTY"/>
+                            <constraint firstItem="WJq-nn-tmS" firstAttribute="top" secondItem="NbR-Lh-6cb" secondAttribute="bottom" constant="10" id="uYk-DQ-LTY"/>
+                            <constraint firstItem="Wt0-YU-5TD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yF5-5m-v4X"/>
                             <constraint firstItem="TyN-EO-uhR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yae-X8-CMf"/>
                             <constraint firstItem="knh-eC-MEW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zK4-IU-bB4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="historyOfChangesTextView" destination="Wt0-YU-5TD" id="sue-DE-D1S"/>
                         <outlet property="minusButtonTitle" destination="TyN-EO-uhR" id="tpI-hj-4OZ"/>
                         <outlet property="plusButtonTitle" destination="WJq-nn-tmS" id="J9b-MC-neG"/>
                         <outlet property="resetButtonTitle" destination="NbR-Lh-6cb" id="Jwh-9G-HaW"/>
@@ -103,6 +120,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

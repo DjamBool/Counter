@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var minusButtonTitle: UIButton!
     
+    
+    @IBOutlet weak var historyOfChangesTextView: UITextView!
+    
     var count = 0
     
     override func viewDidLoad() {
@@ -23,6 +26,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         textLabel.layer.masksToBounds = true
         textLabel.layer.cornerRadius = 10
+        historyOfChangesTextView.isEditable = false
     }
 
     override func viewWillLayoutSubviews() {
