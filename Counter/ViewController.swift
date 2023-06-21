@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     @IBAction func reset() {
         count = 0
         textLabel.text = "0"
-        historyOfChangesTextView.text = "История изменений:\n[\(date)]: значение сброшено\n"
+        historyOfChangesTextView.text += "[\(date)]: значение сброшено\n"
     }
     
     private func setButtonAppearance(button: UIButton) {
